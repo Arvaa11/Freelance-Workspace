@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Messages - WorkSpace</title>
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard">
+
+
+        <!-- ==========================
+             SIDEBAR
+        =========================== -->
+
+        <aside class="sidebar">
+
+
+            <div class="logo">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h2>WorkSpace</h2>
+
+            </div>
+
+
+            <ul>
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="projects.html">
+
+                        <i class="fa-solid fa-folder"></i>
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="clients.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Clients
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="tasks.html">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        Tasks
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="invoices.html">
+
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                        Invoices
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="calendar.html">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        Calendar
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="messages.html" class="active">
+
+                        <i class="fa-solid fa-message"></i>
+
+                        Messages
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==========================
+             MAIN CONTENT
+        =========================== -->
+
+        <main class="main-content">
+
+
+            <!-- ==========================
+                 HEADER
+            =========================== -->
+
+            <header class="header">
+
+
+                <div class="welcome">
+
+                    <h1>Messages</h1>
+
+                    <p>
+
+                        Stay connected with your clients and team.
+
+                    </p>
+
+                </div>
+
+
+                <div class="header-right">
+
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search messages..."
+                        >
+
+                    </div>
+
+
+                    <button class="notification">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div class="profile">
+
+                        <img
+                            src="Picture.png"
+                            alt="Haly Noor"
+                        >
+
+
+                        <div>
+
+                            <h4>Arwa Mahmood</h4>
+
+                            <small>Front-end Developer</small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ==========================
+                 MESSAGES CONTAINER
+            =========================== -->
+
+            <section class="messages-container">
+
+
+                <!-- ==========================
+                     CONVERSATIONS
+                =========================== -->
+
+                <div class="conversations">
+
+
+                    <div class="conversation-header">
+
+
+                        <div>
+
+                            <h2>Messages</h2>
+
+                            <span>5 conversations</span>
+
+                        </div>
+
+
+                        <button class="new-message-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="conversation-search">
+
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                        <input
+                            type="text"
+                            placeholder="Search conversations..."
+                        >
+
+
+                    </div>
+
+
+                    <!-- Conversation 1 -->
+
+                    <div class="conversation active-conversation">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Ali Khan"
+                        >
+
+
+                        <div class="conversation-info">
+
+
+                            <div class="conversation-name">
+
+
+                                <strong>Ali Khan</strong>
+
+                                <span>10:42 AM</span>
+
+
+                            </div>
+
+
+                            <p>
+
+                                The homepage looks great!
+
+                            </p>
+
+
+                        </div>
+
+
+                        <span class="unread-count">
+
+                            2
+
+                        </span>
+
+
+                    </div>
+
+
+                    <!-- Conversation 2 -->
+
+                    <div class="conversation">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=47"
+                            alt="Sara Ahmed"
+                        >
+
+
+                        <div class="conversation-info">
+
+
+                            <div class="conversation-name">
+
+
+                                <strong>Sara Ahmed</strong>
+
+                                <span>Yesterday</span>
+
+
+                            </div>
+
+
+                            <p>
+
+                                Can you send the latest update?
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Conversation 3 -->
+
+                    <div class="conversation">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=11"
+                            alt="John Smith"
+                        >
+
+
+                        <div class="conversation-info">
+
+
+                            <div class="conversation-name">
+
+
+                                <strong>John Smith</strong>
+
+                                <span>Mon</span>
+
+
+                            </div>
+
+
+                            <p>
+
+                                Thanks for your work!
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Conversation 4 -->
+
+                    <div class="conversation">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=32"
+                            alt="Fatima Noor"
+                        >
+
+
+                        <div class="conversation-info">
+
+
+                            <div class="conversation-name">
+
+
+                                <strong>Fatima Noor</strong>
+
+                                <span>Sun</span>
+
+
+                            </div>
+
+
+                            <p>
+
+                                Let's discuss the project.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Conversation 5 -->
+
+                    <div class="conversation">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=5"
+                            alt="Michael Lee"
+                        >
+
+
+                        <div class="conversation-info">
+
+
+                            <div class="conversation-name">
+
+
+                                <strong>Michael Lee</strong>
+
+                                <span>Fri</span>
+
+
+                            </div>
+
+
+                            <p>
+
+                                I have sent the requirements.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==========================
+                     CHAT AREA
+                =========================== -->
+
+                <div class="chat-area">
+
+
+                    <!-- Chat Header -->
+
+                    <div class="chat-header">
+
+
+                        <div class="chat-user">
+
+
+                            <img
+                                src="https://i.pravatar.cc/100?img=12"
+                                alt="Ali Khan"
+                            >
+
+
+                            <div>
+
+
+                                <h3>Ali Khan</h3>
+
+
+                                <span>
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                    Online
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="chat-actions">
+
+
+                            <button>
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </button>
+
+
+                            <button>
+
+                                <i class="fa-solid fa-video"></i>
+
+                            </button>
+
+
+                            <button>
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Messages -->
+
+                    <div class="chat-messages">
+
+
+                        <div class="message-date">
+
+                            Today, July 15
+
+                        </div>
+
+
+                        <!-- Received Message -->
+
+                        <div class="message received">
+
+
+                            <img
+                                src="https://i.pravatar.cc/100?img=12"
+                                alt="Ali Khan"
+                            >
+
+
+                            <div class="message-content">
+
+
+                                <p>
+
+                                    Hi Arwa! I just reviewed the latest version
+                                    of the website.
+
+                                </p>
+
+
+                                <span>
+
+                                    10:30 AM
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Sent Message -->
+
+                        <div class="message sent">
+
+
+                            <div class="message-content">
+
+
+                                <p>
+
+                                    Hi Ali! Great. What do you think about the
+                                    homepage design?
+
+                                </p>
+
+
+                                <span>
+
+                                    10:32 AM
+
+                                    <i class="fa-solid fa-check-double"></i>
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Received Message -->
+
+                        <div class="message received">
+
+
+                            <img
+                                src="https://i.pravatar.cc/100?img=12"
+                                alt="Ali Khan"
+                            >
+
+
+                            <div class="message-content">
+
+
+                                <p>
+
+                                    The homepage looks great! I really like the
+                                    clean and professional design.
+
+                                </p>
+
+
+                                <span>
+
+                                    10:40 AM
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Received Message -->
+
+                        <div class="message received">
+
+
+                            <img
+                                src="https://i.pravatar.cc/100?img=12"
+                                alt="Ali Khan"
+                            >
+
+
+                            <div class="message-content">
+
+
+                                <p>
+
+                                    Can we also add the testimonials section
+                                    before the launch?
+
+                                </p>
+
+
+                                <span>
+
+                                    10:42 AM
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Sent Message -->
+
+                        <div class="message sent">
+
+
+                            <div class="message-content">
+
+
+                                <p>
+
+                                    Absolutely! I'll add the testimonials section
+                                    and send you the updated version.
+
+                                </p>
+
+
+                                <span>
+
+                                    10:45 AM
+
+                                    <i class="fa-solid fa-check-double"></i>
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Message Input -->
+
+                    <div class="message-input-area">
+
+
+                        <button class="attachment-btn">
+
+                            <i class="fa-solid fa-paperclip"></i>
+
+                        </button>
+
+
+                        <input
+                            type="text"
+                            placeholder="Type your message..."
+                        >
+
+
+                        <button class="emoji-btn">
+
+                            <i class="fa-regular fa-face-smile"></i>
+
+                        </button>
+
+
+                        <button class="send-btn">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</body>
+
+</html>

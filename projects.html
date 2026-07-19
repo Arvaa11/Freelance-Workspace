@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects - WorkSpace</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         DASHBOARD LAYOUT
+    =========================== -->
+
+    <div class="dashboard">
+
+
+        <!-- ==========================
+             SIDEBAR
+        =========================== -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h2>WorkSpace</h2>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+
+                    <a href="index.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="projects.html" class="active">
+
+                        <i class="fa-solid fa-folder"></i>
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="clients.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Clients
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="tasks.html">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        Tasks
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="invoices.html">
+
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                        Invoices
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="calendar.html">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        Calendar
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="messages.html">
+
+                        <i class="fa-solid fa-message"></i>
+
+                        Messages
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================
+             MAIN CONTENT
+        =========================== -->
+
+        <main class="main-content">
+
+
+            <!-- ==========================
+                 HEADER
+            =========================== -->
+
+            <header class="header">
+
+
+                <!-- Page Title -->
+
+                <div class="welcome">
+
+                    <h1>Projects</h1>
+
+                    <p>
+                        Manage and track all your freelance projects.
+                    </p>
+
+                </div>
+
+
+                <!-- Header Right -->
+
+                <div class="header-right">
+
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" placeholder="Search projects...">
+
+                    </div>
+
+
+                    <!-- Notification -->
+
+                    <button class="notification">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- Profile -->
+
+                    <div class="profile">
+
+                        <img src="Picture.png" alt="Haly Noor">
+
+                        <div>
+
+                            <h4>Arwa Mahmood</h4>
+
+                            <small>Front-end Developer</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================
+                 PROJECT SUMMARY CARDS
+            =========================== -->
+
+            <section class="stats-grid">
+
+
+                <!-- Total Projects -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p>Total Projects</p>
+
+                        <h2>12</h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Active Projects -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-spinner"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p>Active Projects</p>
+
+                        <h2>5</h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Completed Projects -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p>Completed</p>
+
+                        <h2>6</h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Upcoming Projects -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p>Upcoming</p>
+
+                        <h2>3</h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================
+                 PROJECTS HEADER
+            =========================== -->
+
+            <section class="section-header">
+
+                <div>
+
+                    <h2>All Projects</h2>
+
+                    <p>
+                        Keep track of your current and completed work.
+                    </p>
+
+                </div>
+
+
+                <button class="primary-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    New Project
+
+                </button>
+
+            </section>
+
+
+            <!-- ==========================
+                 PROJECT FILTERS
+            =========================== -->
+
+            <div class="project-filters">
+
+                <button class="filter-btn active">
+                    All Projects
+                </button>
+
+                <button class="filter-btn">
+                    In Progress
+                </button>
+
+                <button class="filter-btn">
+                    Completed
+                </button>
+
+                <button class="filter-btn">
+                    On Hold
+                </button>
+
+            </div>
+
+
+            <!-- ==========================
+                 PROJECT CARDS
+            =========================== -->
+
+            <section class="projects-grid">
+
+
+                <!-- Project 1 -->
+
+                <div class="project-card">
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon blue">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </div>
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>Business Website</h3>
+
+                    <p class="project-client">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        TechCorp Solutions
+
+                    </p>
+
+
+                    <p class="project-description">
+
+                        A modern responsive business website
+                        built with HTML and CSS.
+
+                    </p>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+
+                            <span>Progress</span>
+
+                            <strong>75%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill" style="width:75%;"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            In Progress
+
+                        </span>
+
+
+                        <span class="project-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 20, 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 2 -->
+
+                <div class="project-card">
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon purple">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </div>
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>Online Store</h3>
+
+                    <p class="project-client">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Fashion Hub
+
+                    </p>
+
+
+                    <p class="project-description">
+
+                        An e-commerce website for a modern
+                        fashion and clothing brand.
+
+                    </p>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+
+                            <span>Progress</span>
+
+                            <strong>60%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill purple-fill" style="width:60%;"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            In Progress
+
+                        </span>
+
+
+                        <span class="project-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 25, 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 3 -->
+
+                <div class="project-card">
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon orange">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>PowerFit Gym Website</h3>
+
+                    <p class="project-client">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        PowerFit Gym
+
+                    </p>
+
+
+                    <p class="project-description">
+
+                        A modern fitness website with membership
+                        plans and training programs.
+
+                    </p>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+
+                            <span>Progress</span>
+
+                            <strong>90%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill orange-fill" style="width:90%;"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            In Progress
+
+                        </span>
+
+
+                        <span class="project-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 18, 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 4 -->
+
+                <div class="project-card">
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon green">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>Business Dashboard</h3>
+
+                    <p class="project-client">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        BusinessPro
+
+                    </p>
+
+
+                    <p class="project-description">
+
+                        A clean business dashboard for managing
+                        sales, customers, and analytics.
+
+                    </p>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+
+                            <span>Progress</span>
+
+                            <strong>100%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill green-fill" style="width:100%;"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span class="status completed-status">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Completed
+
+                        </span>
+
+
+                        <span class="project-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 10, 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 5 -->
+
+                <div class="project-card">
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon blue">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>AI Startup Landing Page</h3>
+
+                    <p class="project-client">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        AI Solutions
+
+                    </p>
+
+
+                    <p class="project-description">
+
+                        A modern SaaS landing page for an
+                        artificial intelligence startup.
+
+                    </p>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+
+                            <span>Progress</span>
+
+                            <strong>100%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill" style="width:100%;"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span class="status completed-status">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Completed
+
+                        </span>
+
+
+                        <span class="project-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jun 30, 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 6 -->
+
+                <div class="project-card">
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon red">
+
+                            <i class="fa-solid fa-mobile-screen"></i>
+
+                        </div>
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>Mobile App Landing Page</h3>
+
+                    <p class="project-client">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Startup Company
+
+                    </p>
+
+
+                    <p class="project-description">
+
+                        A promotional landing page for a
+                        productivity mobile application.
+
+                    </p>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+
+                            <span>Progress</span>
+
+                            <strong>35%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill red-fill" style="width:35%;"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span class="status hold-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            On Hold
+
+                        </span>
+
+
+                        <span class="project-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Aug 05, 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

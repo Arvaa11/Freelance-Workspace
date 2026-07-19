@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clients - WorkSpace</title>
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard">
+
+
+        <!-- ==========================
+             SIDEBAR
+        =========================== -->
+
+        <aside class="sidebar">
+
+
+            <div class="logo">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h2>WorkSpace</h2>
+
+            </div>
+
+
+            <ul>
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="projects.html">
+
+                        <i class="fa-solid fa-folder"></i>
+
+                        Projects
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="clients.html" class="active">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Clients
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="tasks.html">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        Tasks
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="invoices.html">
+
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                        Invoices
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="calendar.html">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        Calendar
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="messages.html">
+
+                        <i class="fa-solid fa-message"></i>
+
+                        Messages
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==========================
+             MAIN CONTENT
+        =========================== -->
+
+        <main class="main-content">
+
+
+            <!-- ==========================
+                 HEADER
+            =========================== -->
+
+            <header class="header">
+
+
+                <div class="welcome">
+
+                    <h1>Clients</h1>
+
+                    <p>
+                        Manage your clients and business relationships.
+                    </p>
+
+                </div>
+
+
+                <div class="header-right">
+
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search clients..."
+                        >
+
+                    </div>
+
+
+                    <button class="notification">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div class="profile">
+
+                        <img
+                            src="Picture.png"
+                            alt="Haly Noor"
+                        >
+
+
+                        <div>
+
+                            <h4>Arwa Mahmood</h4>
+
+                            <small>Front-end Developer</small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ==========================
+                 CLIENT STATISTICS
+            =========================== -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>Total Clients</p>
+
+                        <h2>24</h2>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="stat-card">
+
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>Active Clients</p>
+
+                        <h2>16</h2>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="stat-card">
+
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>New This Month</p>
+
+                        <h2>5</h2>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="stat-card">
+
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>Top Clients</p>
+
+                        <h2>8</h2>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ==========================
+                 CLIENTS HEADER
+            =========================== -->
+
+            <section class="section-header">
+
+
+                <div>
+
+                    <h2>All Clients</h2>
+
+                    <p>
+                        View and manage your client relationships.
+                    </p>
+
+                </div>
+
+
+                <button class="primary-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add New Client
+
+                </button>
+
+
+            </section>
+
+
+            <!-- ==========================
+                 CLIENT FILTERS
+            =========================== -->
+
+            <div class="project-filters">
+
+
+                <button class="filter-btn active">
+
+                    All Clients
+
+                </button>
+
+
+                <button class="filter-btn">
+
+                    Active
+
+                </button>
+
+
+                <button class="filter-btn">
+
+                    Inactive
+
+                </button>
+
+
+                <button class="filter-btn">
+
+                    VIP Clients
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ==========================
+                 CLIENTS GRID
+            =========================== -->
+
+            <section class="clients-grid">
+
+
+                <!-- Client 1 -->
+
+                <div class="client-card">
+
+
+                    <div class="client-card-top">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Ali Khan"
+                        >
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>Ali Khan</h3>
+
+
+                    <p class="client-company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        TechCorp Solutions
+
+                    </p>
+
+
+                    <div class="client-contact">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            ali@techcorp.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +92 300 1234567
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="client-info">
+
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <strong>4</strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Revenue</span>
+
+                            <strong>$4,850</strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-footer">
+
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View Profile
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Client 2 -->
+
+                <div class="client-card">
+
+
+                    <div class="client-card-top">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=47"
+                            alt="Sara Ahmed"
+                        >
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>Sara Ahmed</h3>
+
+
+                    <p class="client-company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Fashion Hub
+
+                    </p>
+
+
+                    <div class="client-contact">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            sara@fashionhub.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +92 301 9876543
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="client-info">
+
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <strong>3</strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Revenue</span>
+
+                            <strong>$3,200</strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-footer">
+
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View Profile
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Client 3 -->
+
+                <div class="client-card">
+
+
+                    <div class="client-card-top">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=11"
+                            alt="John Smith"
+                        >
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>John Smith</h3>
+
+
+                    <p class="client-company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        AI Solutions
+
+                    </p>
+
+
+                    <div class="client-contact">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            john@aisolutions.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +1 555 1234567
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="client-info">
+
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <strong>2</strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Revenue</span>
+
+                            <strong>$2,750</strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-footer">
+
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View Profile
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Client 4 -->
+
+                <div class="client-card">
+
+
+                    <div class="client-card-top">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=32"
+                            alt="Fatima Noor"
+                        >
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>Fatima Noor</h3>
+
+
+                    <p class="client-company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        PowerFit Gym
+
+                    </p>
+
+
+                    <div class="client-contact">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            fatima@powerfit.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +92 333 5556677
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="client-info">
+
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <strong>2</strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Revenue</span>
+
+                            <strong>$1,900</strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-footer">
+
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View Profile
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Client 5 -->
+
+                <div class="client-card">
+
+
+                    <div class="client-card-top">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=5"
+                            alt="Michael Lee"
+                        >
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>Michael Lee</h3>
+
+
+                    <p class="client-company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Startup Company
+
+                    </p>
+
+
+                    <div class="client-contact">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            michael@startup.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +1 555 6789012
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="client-info">
+
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <strong>1</strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Revenue</span>
+
+                            <strong>$850</strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-footer">
+
+
+                        <span class="status hold-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Inactive
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View Profile
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Client 6 -->
+
+                <div class="client-card">
+
+
+                    <div class="client-card-top">
+
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=44"
+                            alt="Emma Wilson"
+                        >
+
+
+                        <button class="more-btn">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>Emma Wilson</h3>
+
+
+                    <p class="client-company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Creative Studio
+
+                    </p>
+
+
+                    <div class="client-contact">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            emma@creativestudio.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +44 7700 123456
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="client-info">
+
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <strong>5</strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Revenue</span>
+
+                            <strong>$6,400</strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-footer">
+
+
+                        <span class="status active-status">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View Profile
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</body>
+
+</html>
