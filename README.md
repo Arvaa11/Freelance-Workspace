@@ -12,3 +12,5 @@ CSS
 JavaScript
 ## Live Demo
 https://arvaa11.github.io/Freelance-Workspace/
+## Screenshot
+Screenshots\Screenshot.jpeg
