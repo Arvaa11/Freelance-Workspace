@@ -2,646 +2,162 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Calendar - WorkSpace</title>
-
-    <!-- Font Awesome -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    >
-
-    <!-- Main CSS -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
-
     <div class="dashboard">
-
-
-        <!-- ==========================
-             SIDEBAR
-        =========================== -->
-
         <aside class="sidebar">
-
-
             <div class="logo">
-
                 <i class="fa-solid fa-laptop-code"></i>
-
                 <h2>WorkSpace</h2>
-
             </div>
-
-
             <ul>
-
-
-                <li>
-
-                    <a href="index.html">
-
-                        <i class="fa-solid fa-house"></i>
-
-                        Dashboard
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="projects.html">
-
-                        <i class="fa-solid fa-folder"></i>
-
-                        Projects
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="clients.html">
-
-                        <i class="fa-solid fa-users"></i>
-
-                        Clients
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="tasks.html">
-
-                        <i class="fa-solid fa-list-check"></i>
-
-                        Tasks
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="invoices.html">
-
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
-
-                        Invoices
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="calendar.html" class="active">
-
-                        <i class="fa-solid fa-calendar-days"></i>
-
-                        Calendar
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="messages.html">
-
-                        <i class="fa-solid fa-message"></i>
-
-                        Messages
-
-                    </a>
-
-                </li>
-
-
-
-
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-folder"></i>Projects</a></li>
+                <li><a href="clients.html"><i class="fa-solid fa-users"></i>Clients</a></li>
+                <li><a href="tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a></li>
+                <li><a href="calendar.html" class="active"><i class="fa-solid fa-calendar-days"></i>Calendar</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
             </ul>
-
-
-            <div class="sidebar-bottom">
-
-                <a href="settings.html">
-
-                    <i class="fa-solid fa-gear"></i>
-
-                    Settings
-
-                </a>
-
-            </div>
-
-
         </aside>
-
-
-        <!-- ==========================
-             MAIN CONTENT
-        =========================== -->
-
         <main class="main-content">
-
-
-            <!-- ==========================
-                 HEADER
-            =========================== -->
-
             <header class="header">
-
-
                 <div class="welcome">
-
                     <h1>Calendar</h1>
-
-                    <p>
-
-                        Keep track of your schedule and upcoming deadlines.
-
-                    </p>
-
+                    <p>Manage meetings, deadlines, and important events in one place.</p>
                 </div>
-
-
                 <div class="header-right">
-
-
                     <div class="search-box">
-
                         <i class="fa-solid fa-magnifying-glass"></i>
-
-                        <input
-                            type="text"
-                            placeholder="Search events..."
-                        >
-
+                        <input class="event-search-input" type="text" placeholder="Search events...">
                     </div>
-
-
-                    <button class="notification">
-
-                        <i class="fa-regular fa-bell"></i>
-
-                        <span class="notification-dot"></span>
-
-                    </button>
-
-
                     <div class="profile">
-
-                        <img
-                            src="Picture.jpeg"
-                            alt="Haly Noor"
-                        >
-
-
+                        <img src="Picture.jpeg" alt="profile">
                         <div>
-
                             <h4>Arwa Mahmood</h4>
-
                             <small>Front-end Developer</small>
-
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </header>
 
-
-            <!-- ==========================
-                 CALENDAR HEADER
-            =========================== -->
-
-            <section class="section-header">
-
-
-                <div>
-
-                    <h2>My Calendar</h2>
-
-                    <p>
-
-                        Manage meetings, deadlines, and important events.
-
-                    </p>
-
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fa-solid fa-calendar"></i></div>
+                    <div><p>Total Events</p><h2 id="total-events">0</h2></div>
                 </div>
-
-
-                <button class="primary-btn">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                    Add Event
-
-                </button>
-
-
+                <div class="stat-card">
+                    <div class="stat-icon yellow"><i class="fa-solid fa-bell"></i></div>
+                    <div><p>Due Today</p><h2 id="due-today">0</h2></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red"><i class="fa-solid fa-exclamation"></i></div>
+                    <div><p>Overdue</p><h2 id="overdue">0</h2></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fa-solid fa-check"></i></div>
+                    <div><p>Completed</p><h2 id="completed-events">0</h2></div>
+                </div>
             </section>
 
-
-            <!-- ==========================
-                 CALENDAR LAYOUT
-            =========================== -->
+            <section class="filter-panel">
+                <div>
+                    <h2>Events</h2>
+                    <p>Organize your schedule and manage upcoming events.</p>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                    <div class="filter-buttons" data-target=".event-item-card">
+                        <button type="button" class="active" data-filter="all">All</button>
+                        <button type="button" data-filter="meeting">Meetings</button>
+                        <button type="button" data-filter="deadline">Deadlines</button>
+                        <button type="button" data-filter="payment">Payments</button>
+                        <button type="button" data-filter="personal">Personal</button>
+                    </div>
+                    <button class="primary-btn" id="add-event-btn"><i class="fa-solid fa-plus"></i> Add Event</button>
+                </div>
+            </section>
 
             <section class="calendar-layout">
-
-
-                <!-- ==========================
-                     CALENDAR
-                =========================== -->
-
                 <div class="calendar-card">
-
-
-                    <div class="calendar-top">
-
-
-                        <button class="calendar-arrow">
-
-                            <i class="fa-solid fa-chevron-left"></i>
-
-                        </button>
-
-
-                        <h2>July 2026</h2>
-
-
-                        <button class="calendar-arrow">
-
-                            <i class="fa-solid fa-chevron-right"></i>
-
-                        </button>
-
-
+                    <div class="calendar-header">
+                        <button type="button" id="prev-month" class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <h2 id="month-year"></h2>
+                        <button type="button" id="next-month" class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-
-
-                    <div class="calendar-weekdays">
-
-
-                        <span>Sun</span>
-
-                        <span>Mon</span>
-
-                        <span>Tue</span>
-
-                        <span>Wed</span>
-
-                        <span>Thu</span>
-
-                        <span>Fri</span>
-
-                        <span>Sat</span>
-
-
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Dynamically generated calendar -->
                     </div>
-
-
-                    <div class="calendar-days">
-
-
-                        <!-- Previous Month -->
-
-                        <div class="calendar-day muted">28</div>
-
-                        <div class="calendar-day muted">29</div>
-
-                        <div class="calendar-day muted">30</div>
-
-
-                        <!-- July -->
-
-                        <div class="calendar-day">1</div>
-
-                        <div class="calendar-day">2</div>
-
-                        <div class="calendar-day">3</div>
-
-                        <div class="calendar-day">4</div>
-
-
-                        <div class="calendar-day">5</div>
-
-                        <div class="calendar-day">6</div>
-
-                        <div class="calendar-day">7</div>
-
-                        <div class="calendar-day">8</div>
-
-                        <div class="calendar-day">9</div>
-
-                        <div class="calendar-day">10</div>
-
-                        <div class="calendar-day">11</div>
-
-
-                        <div class="calendar-day">12</div>
-
-                        <div class="calendar-day">13</div>
-
-                        <div class="calendar-day">14</div>
-
-
-                        <div class="calendar-day today">
-
-                            15
-
-                            <span class="event-dot"></span>
-
-                        </div>
-
-
-                        <div class="calendar-day">
-
-                            16
-
-                            <span class="event-dot blue-event"></span>
-
-                        </div>
-
-
-                        <div class="calendar-day">17</div>
-
-
-                        <div class="calendar-day">
-
-                            18
-
-                            <span class="event-dot orange-event"></span>
-
-                        </div>
-
-
-                        <div class="calendar-day">19</div>
-
-
-                        <div class="calendar-day">
-
-                            20
-
-                            <span class="event-dot purple-event"></span>
-
-                        </div>
-
-
-                        <div class="calendar-day">21</div>
-
-                        <div class="calendar-day">22</div>
-
-                        <div class="calendar-day">23</div>
-
-                        <div class="calendar-day">24</div>
-
-                        <div class="calendar-day">25</div>
-
-
-                        <div class="calendar-day">26</div>
-
-                        <div class="calendar-day">27</div>
-
-                        <div class="calendar-day">28</div>
-
-                        <div class="calendar-day">29</div>
-
-                        <div class="calendar-day">30</div>
-
-                        <div class="calendar-day">31</div>
-
-
-                        <!-- Next Month -->
-
-                        <div class="calendar-day muted">1</div>
-
-                    </div>
-
-
                 </div>
 
-
-                <!-- ==========================
-                     UPCOMING EVENTS
-                =========================== -->
-
-                <div class="upcoming-card">
-
-
-                    <div class="upcoming-header">
-
-
-                        <h2>Upcoming Events</h2>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-
+                <div class="calendar-sidebar">
+                    <div class="selected-date-section">
+                        <h3 id="selected-date-title">Selected Date</h3>
+                        <div id="date-events" class="date-events-list">
+                            <p style="color:var(--text-light);">Click on a date to view events.</p>
+                        </div>
                     </div>
 
-
-                    <!-- Event 1 -->
-
-                    <div class="event-item">
-
-
-                        <div class="event-date blue-event-box">
-
-                            <strong>15</strong>
-
-                            <span>JUL</span>
-
+                    <div class="upcoming-events-section">
+                        <h3><i class="fa-solid fa-star"></i> Upcoming Events</h3>
+                        <div id="upcoming-events" class="upcoming-list">
+                            <p style="color:var(--text-light);">No upcoming events.</p>
                         </div>
-
-
-                        <div class="event-details">
-
-
-                            <h4>Client Meeting</h4>
-
-                            <p>
-
-                                <i class="fa-regular fa-clock"></i>
-
-                                10:00 AM - 11:00 AM
-
-                            </p>
-
-
-                            <span class="event-project">
-
-                                Business Website
-
-                            </span>
-
-                        </div>
-
-
                     </div>
-
-
-                    <!-- Event 2 -->
-
-                    <div class="event-item">
-
-
-                        <div class="event-date orange-event-box">
-
-                            <strong>18</strong>
-
-                            <span>JUL</span>
-
-                        </div>
-
-
-                        <div class="event-details">
-
-
-                            <h4>Project Deadline</h4>
-
-                            <p>
-
-                                <i class="fa-regular fa-clock"></i>
-
-                                Due by 11:59 PM
-
-                            </p>
-
-
-                            <span class="event-project">
-
-                                Business Website
-
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Event 3 -->
-
-                    <div class="event-item">
-
-
-                        <div class="event-date purple-event-box">
-
-                            <strong>20</strong>
-
-                            <span>JUL</span>
-
-                        </div>
-
-
-                        <div class="event-details">
-
-
-                            <h4>Project Review</h4>
-
-                            <p>
-
-                                <i class="fa-regular fa-clock"></i>
-
-                                02:00 PM - 03:00 PM
-
-                            </p>
-
-
-                            <span class="event-project">
-
-                                Online Store
-
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Event 4 -->
-
-                    <div class="event-item">
-
-
-                        <div class="event-date green-event-box">
-
-                            <strong>25</strong>
-
-                            <span>JUL</span>
-
-                        </div>
-
-
-                        <div class="event-details">
-
-
-                            <h4>Invoice Follow-up</h4>
-
-                            <p>
-
-                                <i class="fa-regular fa-clock"></i>
-
-                                09:00 AM
-
-                            </p>
-
-
-                            <span class="event-project">
-
-                                Client Payment
-
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
                 </div>
-
-
             </section>
 
+            <!-- Full Events List with Filters -->
+            <section class="filter-panel" style="margin-top:32px;">
+                <h2>All Events</h2>
+            </section>
+            <div id="events-list" class="events-list-container">
+                <!-- Dynamically populated with filtered events -->
+            </div>
 
+            <!-- Add/Edit Event Modal -->
+            <div class="modal" id="event-modal" aria-hidden="true">
+                <div class="modal-panel">
+                    <header class="modal-header">
+                        <h3 id="event-modal-title">Add Event</h3>
+                        <button class="modal-close" id="event-modal-close">✕</button>
+                    </header>
+                    <form id="event-form">
+                        <input type="hidden" name="id">
+                        <div class="form-row">
+                            <label>Event Title<input name="title" type="text" required></label>
+                            <label>Event Type
+                                <select name="type" required>
+                                    <option value="">Select type...</option>
+                                    <option value="Meeting">Meeting</option>
+                                    <option value="Deadline">Deadline</option>
+                                    <option value="Payment">Payment</option>
+                                    <option value="Personal">Personal</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>Date<input name="date" type="date" required></label>
+                            <label>Time (Optional)<input name="time" type="time"></label>
+                        </div>
+                        <div class="form-row">
+                            <label>Related Project<input name="project" type="text" placeholder="e.g., Website Redesign"></label>
+                        </div>
+                        <label>Description<textarea name="description" rows="3"></textarea></label>
+                        <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:14px;">
+                            <button type="button" class="secondary-btn" id="event-modal-cancel">Cancel</button>
+                            <button type="submit" class="primary-btn">Save Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
-
-
     </div>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>

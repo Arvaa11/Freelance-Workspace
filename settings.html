@@ -2,197 +2,109 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Freelancer Workspace</title>
 
-    <title>Settings - WorkSpace</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    >
-
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
     <div class="dashboard">
 
-
-        <!-- ==========================
+        <!-- =========================
              SIDEBAR
-        =========================== -->
+        ========================== -->
 
         <aside class="sidebar">
 
-
             <div class="logo">
-
                 <i class="fa-solid fa-laptop-code"></i>
-
                 <h2>WorkSpace</h2>
-
             </div>
-
 
             <ul>
 
-
                 <li>
-
                     <a href="index.html">
-
                         <i class="fa-solid fa-house"></i>
-
                         Dashboard
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="projects.html">
-
-                        <i class="fa-solid fa-folder"></i>
-
+                        <i class="fa-solid fa-folder-open"></i>
                         Projects
-
                     </a>
-
                 </li>
 
-
                 <li>
-
-                    <a href="clients.html">
-
-                        <i class="fa-solid fa-users"></i>
-
-                        Clients
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
                     <a href="tasks.html">
-
                         <i class="fa-solid fa-list-check"></i>
-
                         Tasks
-
                     </a>
-
                 </li>
 
-
                 <li>
-
-                    <a href="invoices.html">
-
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
-
-                        Invoices
-
+                    <a href="clients.html">
+                        <i class="fa-solid fa-users"></i>
+                        Clients
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="calendar.html">
-
                         <i class="fa-solid fa-calendar-days"></i>
-
                         Calendar
-
                     </a>
-
                 </li>
-
 
                 <li>
-
-                    <a href="messages.html">
-
-                        <i class="fa-solid fa-message"></i>
-
-                        Messages
-
+                    <a href="settings.html" class="active">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
                     </a>
-
                 </li>
-
 
             </ul>
 
-
-            <div class="sidebar-bottom">
-
-                <a href="settings.html">
-
-                    <i class="fa-solid fa-gear"></i>
-
-                    Settings
-
-                </a>
-
-            </div>
-
-
         </aside>
 
-
-        <!-- ==========================
+        <!-- =========================
              MAIN CONTENT
-        =========================== -->
+        ========================== -->
 
         <main class="main-content">
-
 
             <!-- HEADER -->
 
             <header class="header">
-
 
                 <div class="welcome">
 
                     <h1>Settings</h1>
 
                     <p>
-
-                        Manage your account and workspace preferences.
-
+                        Manage your profile and personalize your Freelancer Workspace.
                     </p>
 
                 </div>
 
-
                 <div class="header-right">
-
 
                     <div class="search-box">
 
                         <i class="fa-solid fa-magnifying-glass"></i>
 
-                        <input
-                            type="text"
-                            placeholder="Search settings..."
-                        >
+                        <input type="text" id="settings-search" placeholder="Search settings...">
 
                     </div>
-
 
                     <button class="notification">
 
@@ -202,512 +114,344 @@
 
                     </button>
 
-
                     <div class="profile">
 
-                        <img
-                            src="Picture.jpeg"
-                            alt="Haly Noor"
-                        >
-
+                        <img src="Picture.jpeg" alt="Profile">
 
                         <div>
 
                             <h4>Arwa Mahmood</h4>
 
-                            <small>Front-end Developer</small>
+                            <small>Frontend Developer</small>
 
                         </div>
 
                     </div>
 
-
                 </div>
-
 
             </header>
 
+            <!-- =========================
+                 SETTINGS CONTENT
+            ========================== -->
 
-            <!-- SETTINGS LAYOUT -->
+            <section class="settings-page">
 
-            <section class="settings-layout">
+                <!-- Profile Information Card -->
 
+                <div class="settings-card">
 
-                <!-- SETTINGS NAVIGATION -->
+                    <div class="card-header">
 
-                <div class="settings-menu">
+                        <h2>
+                            <i class="fa-solid fa-user"></i>
+                            Profile Information
+                        </h2>
 
+                        <p>
+                            Update your personal details and profile information.
+                        </p>
 
-                    <button class="settings-tab active">
+                    </div>
 
-                        <i class="fa-solid fa-user"></i>
+                    <!-- =========================
+                         PROFILE FORM
+                    ========================== -->
 
-                        Profile
+                    <form id="profile-form" class="settings-form">
 
-                    </button>
+                        <div class="profile-picture">
 
+                            <img id="profile-preview" src="Picture.jpeg" alt="Profile preview">
 
-                    <button class="settings-tab">
+                            <label for="profile-photo" class="change-photo-btn">
+                                <i class="fa-solid fa-camera"></i>
+                                Change Photo
+                            </label>
+                            <input id="profile-photo" class="visually-hidden" type="file" accept="image/*">
+                            <small class="field-hint">your photo is will be uploaded.</small>
 
-                        <i class="fa-solid fa-bell"></i>
+                        </div>
 
-                        Notifications
+                        <div class="form-grid">
 
-                    </button>
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input id="full-name" type="text" name="fullName" value="Arwa Mahmood" required>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="job-title">Job Title</label>
+                                <input id="job-title" type="text" name="jobTitle" value="Frontend Developer" required>
+                            </div>
 
-                    <button class="settings-tab">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" name="email" value="arwa@example.com" required>
+                            </div>
 
-                        <i class="fa-solid fa-palette"></i>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" type="tel" name="phone" placeholder="+92 XXX XXXXXXX">
+                            </div>
 
-                        Appearance
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input id="country" type="text" name="country" value="Pakistan">
+                            </div>
 
-                    </button>
+                        </div>
 
+                        <div class="form-group">
 
-                    <button class="settings-tab">
+                            <label for="bio">Bio</label>
 
-                        <i class="fa-solid fa-shield-halved"></i>
+                            <textarea id="bio" name="bio" rows="5"
+                                placeholder="Write a short bio about yourself...">Frontend Developer passionate about building modern, responsive and user-friendly websites.</textarea>
 
-                        Security
+                        </div>
 
-                    </button>
+                        <button type="submit" class="primary-btn">
 
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
 
                 </div>
 
 
-                <!-- SETTINGS CONTENT -->
 
-                <div class="settings-content">
+                <!-- =========================
+                     SECURITY
+                ========================== -->
 
+                <div class="settings-card">
 
-                    <!-- PROFILE SETTINGS -->
+                    <div class="card-header">
 
-                    <div class="settings-section">
+                        <h2>
 
+                            <i class="fa-solid fa-lock"></i>
 
-                        <div class="settings-section-header">
+                            Change Password
 
+                        </h2>
 
-                            <div>
+                        <p>
 
-                                <h2>Profile Information</h2>
+                            Update your account password.
 
-                                <p>
-
-                                    Update your personal information and profile details.
-
-                                </p>
-
-                            </div>
-
-
-                            <button class="primary-btn">
-
-                                Save Changes
-
-                            </button>
-
-
-                        </div>
-
-
-                        <div class="profile-settings">
-
-
-                            <div class="profile-photo">
-
-
-                                <img
-                                    src="Picture.jpeg"
-                                    alt="Haly Noor"
-                                >
-
-
-                                <button class="change-photo-btn">
-
-                                    <i class="fa-solid fa-camera"></i>
-
-                                    Change Photo
-
-                                </button>
-
-
-                            </div>
-
-
-                            <div class="profile-form">
-
-
-                                <div class="form-row">
-
-
-                                    <div class="form-group">
-
-                                        <label>Full Name</label>
-
-                                        <input
-                                            type="text"
-                                            value="Arwa Mahmood"
-                                        >
-
-                                    </div>
-
-
-                                    <div class="form-group">
-
-                                        <label>Email Address</label>
-
-                                        <input
-                                            type="email"
-                                            value="arwa@example.com"
-                                        >
-
-                                    </div>
-
-
-                                </div>
-
-
-                                <div class="form-row">
-
-
-                                    <div class="form-group">
-
-                                        <label>Job Title</label>
-
-                                        <input
-                                            type="text"
-                                            value="Frontend Developer"
-                                        >
-
-                                    </div>
-
-
-                                    <div class="form-group">
-
-                                        <label>Location</label>
-
-                                        <input
-                                            type="text"
-                                            value="Pakistan"
-                                        >
-
-                                    </div>
-
-
-                                </div>
-
-
-                                <div class="form-group">
-
-
-                                    <label>About Me</label>
-
-
-                                    <textarea rows="5">
-
-I create clean, responsive, and user-friendly websites using modern web technologies.
-
-                                    </textarea>
-
-
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
+                        </p>
 
                     </div>
 
+                    <form id="password-form" class="settings-form">
 
-                    <!-- NOTIFICATION SETTINGS -->
+                        <div class="form-group">
 
-                    <div class="settings-section">
+                            <label for="current-password">Current Password</label>
 
-
-                        <div class="settings-section-header">
-
-
-                            <div>
-
-                                <h2>Notifications</h2>
-
-                                <p>
-
-                                    Choose which notifications you want to receive.
-
-                                </p>
-
-                            </div>
-
+                            <input id="current-password" type="password" name="currentPassword"
+                                autocomplete="current-password" required>
 
                         </div>
 
+                        <div class="form-group">
 
-                        <div class="setting-option">
+                            <label for="new-password">New Password</label>
 
-
-                            <div>
-
-                                <h4>Email Notifications</h4>
-
-                                <p>
-
-                                    Receive important updates via email.
-
-                                </p>
-
-                            </div>
-
-
-                            <label class="switch">
-
-                                <input
-                                    type="checkbox"
-                                    checked
-                                >
-
-                                <span class="slider"></span>
-
-                            </label>
-
+                            <input id="new-password" type="password" name="newPassword" autocomplete="new-password"
+                                required>
 
                         </div>
 
+                        <div class="form-group">
 
-                        <div class="setting-option">
+                            <label for="confirm-password">Confirm Password</label>
 
-
-                            <div>
-
-                                <h4>New Messages</h4>
-
-                                <p>
-
-                                    Get notified when a client sends you a message.
-
-                                </p>
-
-                            </div>
-
-
-                            <label class="switch">
-
-                                <input
-                                    type="checkbox"
-                                    checked
-                                >
-
-                                <span class="slider"></span>
-
-                            </label>
-
+                            <input id="confirm-password" type="password" name="confirmPassword"
+                                autocomplete="new-password" required>
 
                         </div>
 
+                        <button type="submit" class="primary-btn">
 
-                        <div class="setting-option">
+                            <i class="fa-solid fa-key"></i>
 
+                            Update Password
 
-                            <div>
+                        </button>
 
-                                <h4>Project Updates</h4>
-
-                                <p>
-
-                                    Receive updates about your projects.
-
-                                </p>
-
-                            </div>
-
-
-                            <label class="switch">
-
-                                <input
-                                    type="checkbox"
-                                    checked
-                                >
-
-                                <span class="slider"></span>
-
-                            </label>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- APPEARANCE SETTINGS -->
-
-                    <div class="settings-section">
-
-
-                        <div class="settings-section-header">
-
-
-                            <div>
-
-                                <h2>Appearance</h2>
-
-                                <p>
-
-                                    Customize how your workspace looks.
-
-                                </p>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="theme-options">
-
-
-                            <div class="theme-card active-theme">
-
-
-                                <div class="theme-preview light-preview">
-
-                                    <div></div>
-
-                                    <div></div>
-
-                                    <div></div>
-
-                                </div>
-
-
-                                <strong>Light Mode</strong>
-
-
-                            </div>
-
-
-                            <div class="theme-card">
-
-
-                                <div class="theme-preview dark-preview">
-
-                                    <div></div>
-
-                                    <div></div>
-
-                                    <div></div>
-
-                                </div>
-
-
-                                <strong>Dark Mode</strong>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- SECURITY SETTINGS -->
-
-                    <div class="settings-section">
-
-
-                        <div class="settings-section-header">
-
-
-                            <div>
-
-                                <h2>Security</h2>
-
-                                <p>
-
-                                    Manage your account security settings.
-
-                                </p>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="security-option">
-
-
-                            <div>
-
-                                <h4>Change Password</h4>
-
-                                <p>
-
-                                    Update your password regularly to keep your account secure.
-
-                                </p>
-
-                            </div>
-
-
-                            <button class="secondary-btn">
-
-                                Change Password
-
-                            </button>
-
-
-                        </div>
-
-
-                        <div class="security-option">
-
-
-                            <div>
-
-                                <h4>Two-Factor Authentication</h4>
-
-                                <p>
-
-                                    Add an extra layer of security to your account.
-
-                                </p>
-
-                            </div>
-
-
-                            <button class="secondary-btn">
-
-                                Enable
-
-                            </button>
-
-
-                        </div>
-
-
-                    </div>
-
+                    </form>
 
                 </div>
 
+
+
+                <!-- =========================
+                     APPEARANCE
+                ========================== -->
+
+                <div class="settings-card">
+
+                    <div class="card-header">
+
+                        <h2>
+
+                            <i class="fa-solid fa-palette"></i>
+
+                            Appearance
+
+                        </h2>
+
+                        <p>
+
+                            Choose your preferred theme.
+
+                        </p>
+
+                    </div>
+
+                    <div class="theme-options">
+
+                        <button type="button" class="theme-card active-theme" data-theme="light">
+
+                            <i class="fa-solid fa-sun"></i>
+
+                            <h3>Light Mode</h3>
+
+                            <p>Bright and clean interface.</p>
+
+                        </button>
+
+                        <button type="button" class="theme-card" data-theme="dark">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                            <h3>Dark Mode</h3>
+
+                            <p>Comfortable for night work.</p>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     NOTIFICATIONS
+                ========================== -->
+
+                <div class="settings-card">
+
+                    <div class="card-header">
+
+                        <h2>
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            Notifications
+
+                        </h2>
+
+                        <p>
+
+                            Manage notification preferences.
+
+                        </p>
+
+                    </div>
+
+                    <div class="notification-list">
+
+                        <label class="switch-row" for="project-updates">
+                            <span>Project Updates</span>
+                            <span class="switch">
+                                <input id="project-updates" name="projectUpdates" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </span>
+                        </label>
+
+                        <label class="switch-row" for="deadline-reminders">
+                            <span>Deadline Reminders</span>
+                            <span class="switch">
+                                <input id="deadline-reminders" name="deadlineReminders" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </span>
+                        </label>
+
+                        <label class="switch-row" for="client-messages">
+                            <span>Client Messages</span>
+                            <span class="switch">
+                                <input id="client-messages" name="clientMessages" type="checkbox">
+                                <span class="switch-slider"></span>
+                            </span>
+                        </label>
+
+                        <label class="switch-row" for="payment-reminders">
+                            <span>Payment Reminders</span>
+                            <span class="switch">
+                                <input id="payment-reminders" name="paymentReminders" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     ABOUT
+                ========================== -->
+
+                <div class="settings-card">
+
+                    <div class="card-header">
+
+                        <h2>
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            About Freelancer Workspace
+
+                        </h2>
+
+                    </div>
+
+                    <div class="about-app">
+
+                        <p><strong>Application Name:</strong> Freelancer Workspace</p>
+
+                        <p><strong>Version:</strong> 1.0</p>
+
+                        <p><strong>Developer:</strong> Arwa Mahmood</p>
+
+                        <p><strong>Technologies Used:</strong> HTML, CSS & JavaScript</p>
+
+                    </div>
+
+                </div>
 
             </section>
 
-
         </main>
-
 
     </div>
 
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
 
 </body>
 

@@ -2,906 +2,386 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Projects - WorkSpace</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Main CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-
-    <!-- ==========================
-         DASHBOARD LAYOUT
-    =========================== -->
-
     <div class="dashboard">
-
-
-        <!-- ==========================
-             SIDEBAR
-        =========================== -->
-
         <aside class="sidebar">
-
             <div class="logo">
-
                 <i class="fa-solid fa-laptop-code"></i>
-
                 <h2>WorkSpace</h2>
-
             </div>
-
-
             <ul>
-
-                <li>
-
-                    <a href="index.html">
-
-                        <i class="fa-solid fa-house"></i>
-
-                        Dashboard
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="projects.html" class="active">
-
-                        <i class="fa-solid fa-folder"></i>
-
-                        Projects
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="clients.html">
-
-                        <i class="fa-solid fa-users"></i>
-
-                        Clients
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="tasks.html">
-
-                        <i class="fa-solid fa-list-check"></i>
-
-                        Tasks
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="invoices.html">
-
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
-
-                        Invoices
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="calendar.html">
-
-                        <i class="fa-solid fa-calendar-days"></i>
-
-                        Calendar
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="messages.html">
-
-                        <i class="fa-solid fa-message"></i>
-
-                        Messages
-
-                    </a>
-
-                </li>
-
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="projects.html" class="active"><i class="fa-solid fa-folder"></i>Projects</a></li>
+                <li><a href="clients.html"><i class="fa-solid fa-users"></i>Clients</a></li>
+                <li><a href="tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a></li>
+                <li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i>Calendar</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
             </ul>
-
-
-            <!-- Sidebar Bottom -->
-
-            <div class="sidebar-bottom">
-
-                <a href="settings.html">
-
-                    <i class="fa-solid fa-gear"></i>
-
-                    Settings
-
-                </a>
-
-            </div>
-
         </aside>
-
-
-        <!-- ==========================
-             MAIN CONTENT
-        =========================== -->
-
         <main class="main-content">
-
-
-            <!-- ==========================
-                 HEADER
-            =========================== -->
-
             <header class="header">
-
-
-                <!-- Page Title -->
-
                 <div class="welcome">
-
                     <h1>Projects</h1>
-
-                    <p>
-                        Manage and track all your freelance projects.
-                    </p>
-
+                    <p>Track project status, deadlines, and client ownership in one place.</p>
                 </div>
-
-
-                <!-- Header Right -->
-
                 <div class="header-right">
-
-
-                    <!-- Search -->
-
                     <div class="search-box">
-
                         <i class="fa-solid fa-magnifying-glass"></i>
-
-                        <input type="text" placeholder="Search projects...">
-
+                        <input class="search-input" data-target=".project-card" type="text" placeholder="Search projects...">
                     </div>
-
-
-                    <!-- Notification -->
-
-                    <button class="notification">
-
-                        <i class="fa-regular fa-bell"></i>
-
-                        <span class="notification-dot"></span>
-
-                    </button>
-
-
-                    <!-- Profile -->
-
                     <div class="profile">
-
-                        <img src="Picture.jpeg" alt="Haly Noor">
-
+                        <img src="Picture.jpeg" alt="profile">
                         <div>
-
                             <h4>Arwa Mahmood</h4>
-
                             <small>Front-end Developer</small>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </header>
 
-
-            <!-- ==========================
-                 PROJECT SUMMARY CARDS
-            =========================== -->
-
             <section class="stats-grid">
-
-
-                <!-- Total Projects -->
-
                 <div class="stat-card">
-
-                    <div class="stat-icon blue">
-
-                        <i class="fa-solid fa-folder-open"></i>
-
-                    </div>
-
-                    <div>
-
-                        <p>Total Projects</p>
-
-                        <h2>12</h2>
-
-                    </div>
-
+                    <div class="stat-icon blue"><i class="fa-solid fa-folder-open"></i></div>
+                    <div><p>Total Projects</p><h2>12</h2></div>
                 </div>
-
-
-                <!-- Active Projects -->
-
                 <div class="stat-card">
-
-                    <div class="stat-icon orange">
-
-                        <i class="fa-solid fa-spinner"></i>
-
-                    </div>
-
-                    <div>
-
-                        <p>Active Projects</p>
-
-                        <h2>5</h2>
-
-                    </div>
-
+                    <div class="stat-icon green"><i class="fa-solid fa-spinner"></i></div>
+                    <div><p>In Progress</p><h2>6</h2></div>
                 </div>
-
-
-                <!-- Completed Projects -->
-
                 <div class="stat-card">
-
-                    <div class="stat-icon green">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                    </div>
-
-                    <div>
-
-                        <p>Completed</p>
-
-                        <h2>6</h2>
-
-                    </div>
-
+                    <div class="stat-icon yellow"><i class="fa-solid fa-check"></i></div>
+                    <div><p>Completed</p><h2>4</h2></div>
                 </div>
-
-
-                <!-- Upcoming Projects -->
-
                 <div class="stat-card">
-
-                    <div class="stat-icon purple">
-
-                        <i class="fa-solid fa-calendar-check"></i>
-
-                    </div>
-
-                    <div>
-
-                        <p>Upcoming</p>
-
-                        <h2>3</h2>
-
-                    </div>
-
+                    <div class="stat-icon orange"><i class="fa-solid fa-clock"></i></div>
+                    <div><p>Pending</p><h2>2</h2></div>
                 </div>
-
             </section>
 
-
-            <!-- ==========================
-                 PROJECTS HEADER
-            =========================== -->
-
-            <section class="section-header">
-
+            <section class="filter-panel">
                 <div>
-
-                    <h2>All Projects</h2>
-
-                    <p>
-                        Keep track of your current and completed work.
-                    </p>
-
+                    <h2>Project List</h2>
+                    <p>Filter and search active project work.</p>
                 </div>
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                    <div class="filter-buttons" data-target=".project-card">
+                        <button type="button" class="active" data-filter="all">All</button>
+                        <button type="button" data-filter="in progress">In Progress</button>
+                        <button type="button" data-filter="completed">Completed</button>
+                        <button type="button" data-filter="pending">Pending</button>
+                        <button type="button" data-filter="on hold">On Hold</button>
+                        <button type="button" data-filter="revision">Revision</button>
+                    </div>
 
+                    <label style="display:flex;align-items:center;gap:8px;">
+                        Sort:
+                        <select id="project-sort" class="filter-select">
+                            <option value="deadline">Deadline</option>
+                            <option value="name">Project Name</option>
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                        </select>
+                    </label>
 
-                <button class="primary-btn">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                    New Project
-
-                </button>
-
+                    <button class="primary-btn add-project" id="add-project-btn">Add Project</button>
+                </div>
             </section>
 
-
-            <!-- ==========================
-                 PROJECT FILTERS
-            =========================== -->
-
-            <div class="project-filters">
-
-                <button class="filter-btn active">
-                    All Projects
-                </button>
-
-                <button class="filter-btn">
-                    In Progress
-                </button>
-
-                <button class="filter-btn">
-                    Completed
-                </button>
-
-                <button class="filter-btn">
-                    On Hold
-                </button>
-
+            <section class="project-list">
+                <article class="project-card" data-status="In Progress">
+                    <div>
+                        <h3>Website Redesign</h3>
+                        <p>Client: Blue Ridge Co. · Category: Business Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill in-progress">In Progress</span>
+                        <span class="priority-pill high">High</span>
+                        <span>$1,800</span>
+                        <span>Due Jul 28</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 72%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Completed">
+                    <div>
+                        <h3>Mobile App UI</h3>
+                        <p>Client: Vega Labs · Category: Dashboard UI</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill completed">Completed</span>
+                        <span class="priority-pill medium">Medium</span>
+                        <span>$2,000</span>
+                        <span>Completed Jul 16</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Pending">
+                    <div>
+                        <h3>Marketing Landing Page</h3>
+                        <p>Client: Nova Studio · Category: Landing Page</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill pending">Pending</span>
+                        <span class="priority-pill low">Low</span>
+                        <span>$950</span>
+                        <span>Due Aug 04</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 35%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="In Progress">
+                    <div>
+                        <h3>Content Management System</h3>
+                        <p>Client: Bright Desk · Category: SaaS Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill in-progress">In Progress</span>
+                        <span class="priority-pill medium">Medium</span>
+                        <span>$1,500</span>
+                        <span>Due Aug 10</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 50%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Completed">
+                    <div>
+                        <h3>Portfolio Refresh</h3>
+                        <p>Client: Emma Ward · Category: Portfolio Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill completed">Completed</span>
+                        <span class="priority-pill low">Low</span>
+                        <span>$650</span>
+                        <span>Completed Jul 25</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="In Progress">
+                    <div>
+                        <h3>Real Estate Showcase</h3>
+                        <p>Client: Harbor Homes · Category: Real Estate Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill in-progress">In Progress</span>
+                        <span class="priority-pill high">High</span>
+                        <span>$2,100</span>
+                        <span>Due Aug 25</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 52%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Completed">
+                    <div>
+                        <h3>Restaurant Booking Site</h3>
+                        <p>Client: Ocean Dine · Category: Restaurant Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill completed">Completed</span>
+                        <span class="priority-pill medium">Medium</span>
+                        <span>$1,600</span>
+                        <span>Completed Jul 20</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Revision">
+                    <div>
+                        <h3>Gym Membership Portal</h3>
+                        <p>Client: Peak Fitness · Category: Gym Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill pending">Revision</span>
+                        <span class="priority-pill medium">Medium</span>
+                        <span>$1,800</span>
+                        <span>Due Aug 20</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Pending">
+                    <div>
+                        <h3>Salon Appointment Site</h3>
+                        <p>Client: Glow Salon · Category: Salon Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill pending">Pending</span>
+                        <span class="priority-pill low">Low</span>
+                        <span>$1,100</span>
+                        <span>Due Aug 08</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 20%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="In Progress">
+                    <div>
+                        <h3>Medical Clinic Website</h3>
+                        <p>Client: CarePoint Clinic · Category: Medical Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill in-progress">In Progress</span>
+                        <span class="priority-pill high">High</span>
+                        <span>$1,900</span>
+                        <span>Due Aug 05</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Pending">
+                    <div>
+                        <h3>Education Platform Landing</h3>
+                        <p>Client: BrightPath Academy · Category: Educational Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill pending">Pending</span>
+                        <span class="priority-pill medium">Medium</span>
+                        <span>$950</span>
+                        <span>Due Aug 15</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 15%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Completed">
+                    <div>
+                        <h3>Travel Agency Microsite</h3>
+                        <p>Client: WanderWay · Category: Travel Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill completed">Completed</span>
+                        <span class="priority-pill low">Low</span>
+                        <span>$1,350</span>
+                        <span>Completed Jul 29</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="On Hold">
+                    <div>
+                        <h3>NGO Donation Portal</h3>
+                        <p>Client: HopeBridge · Category: NGO Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill pending">On Hold</span>
+                        <span class="priority-pill medium">Medium</span>
+                        <span>$1,800</span>
+                        <span>Due Sep 18</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="In Progress">
+                    <div>
+                        <h3>SaaS Landing Page</h3>
+                        <p>Client: CloudCore · Category: SaaS Website</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill in-progress">In Progress</span>
+                        <span class="priority-pill high">High</span>
+                        <span>$2,200</span>
+                        <span>Due Aug 27</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 58%;"></div>
+                    </div>
+                </article>
+                <article class="project-card" data-status="Completed">
+                    <div>
+                        <h3>Personal Blog Launch</h3>
+                        <p>Client: Elena Brooks · Category: Personal Blog</p>
+                    </div>
+                    <div class="project-details">
+                        <span class="status-pill completed">Completed</span>
+                        <span class="priority-pill low">Low</span>
+                        <span>$450</span>
+                        <span>Completed Jul 23</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </article>
+            </section>
+            <!-- Project Modals -->
+            <div class="modal" id="project-modal" aria-hidden="true">
+                <div class="modal-panel">
+                    <header class="modal-header">
+                        <h3 id="modal-title">Add Project</h3>
+                        <button class="modal-close" id="modal-close">✕</button>
+                    </header>
+                    <form id="project-form">
+                        <input type="hidden" name="id">
+                        <div class="form-row">
+                            <label>Project Name<input name="name" type="text" required></label>
+                            <label>Client Name<input name="client" type="text" required></label>
+                        </div>
+                        <div class="form-row">
+                            <label>Category<input name="category" type="text"></label>
+                            <label>Budget ($)<input name="budget" type="number" min="0" step="0.01"></label>
+                        </div>
+                        <div class="form-row">
+                            <label>Start Date<input name="startDate" type="date"></label>
+                            <label>Deadline<input name="deadline" type="date"></label>
+                        </div>
+                        <div class="form-row">
+                            <label>Status
+                                <select name="status">
+                                    <option>Pending</option>
+                                    <option>In Progress</option>
+                                    <option>Completed</option>
+                                    <option>On Hold</option>
+                                    <option>Revision</option>
+                                </select>
+                            </label>
+                            <label>Priority
+                                <select name="priority">
+                                    <option>High</option>
+                                    <option>Medium</option>
+                                    <option selected>Low</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label>Description<textarea name="description" rows="4"></textarea></label>
+                        <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:14px;">
+                            <button type="button" class="secondary-btn" id="modal-cancel">Cancel</button>
+                            <button type="submit" class="primary-btn" id="modal-save">Save Project</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-
-            <!-- ==========================
-                 PROJECT CARDS
-            =========================== -->
-
-            <section class="projects-grid">
-
-
-                <!-- Project 1 -->
-
-                <div class="project-card">
-
-
-                    <div class="project-card-header">
-
-                        <div class="project-icon blue">
-
-                            <i class="fa-solid fa-globe"></i>
-
-                        </div>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h3>Business Website</h3>
-
-                    <p class="project-client">
-
-                        <i class="fa-solid fa-user"></i>
-
-                        TechCorp Solutions
-
-                    </p>
-
-
-                    <p class="project-description">
-
-                        A modern responsive business website
-                        built with HTML and CSS.
-
-                    </p>
-
-
-                    <div class="project-progress">
-
-                        <div class="progress-info">
-
-                            <span>Progress</span>
-
-                            <strong>75%</strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill" style="width:75%;"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="status active-status">
-
-                            <i class="fa-solid fa-circle"></i>
-
-                            In Progress
-
-                        </span>
-
-
-                        <span class="project-date">
-
-                            <i class="fa-regular fa-calendar"></i>
-
-                            Jul 20, 2026
-
-                        </span>
-
-                    </div>
-
+            <!-- Details Modal -->
+            <div class="modal" id="details-modal" aria-hidden="true">
+                <div class="modal-panel">
+                    <header class="modal-header">
+                        <h3 id="details-title">Project Details</h3>
+                        <button class="modal-close" id="details-close">✕</button>
+                    </header>
+                    <div id="details-content" class="modal-content"></div>
                 </div>
-
-
-                <!-- Project 2 -->
-
-                <div class="project-card">
-
-
-                    <div class="project-card-header">
-
-                        <div class="project-icon purple">
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </div>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h3>Online Store</h3>
-
-                    <p class="project-client">
-
-                        <i class="fa-solid fa-user"></i>
-
-                        Fashion Hub
-
-                    </p>
-
-
-                    <p class="project-description">
-
-                        An e-commerce website for a modern
-                        fashion and clothing brand.
-
-                    </p>
-
-
-                    <div class="project-progress">
-
-                        <div class="progress-info">
-
-                            <span>Progress</span>
-
-                            <strong>60%</strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill purple-fill" style="width:60%;"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="status active-status">
-
-                            <i class="fa-solid fa-circle"></i>
-
-                            In Progress
-
-                        </span>
-
-
-                        <span class="project-date">
-
-                            <i class="fa-regular fa-calendar"></i>
-
-                            Jul 25, 2026
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 3 -->
-
-                <div class="project-card">
-
-
-                    <div class="project-card-header">
-
-                        <div class="project-icon orange">
-
-                            <i class="fa-solid fa-dumbbell"></i>
-
-                        </div>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h3>PowerFit Gym Website</h3>
-
-                    <p class="project-client">
-
-                        <i class="fa-solid fa-user"></i>
-
-                        PowerFit Gym
-
-                    </p>
-
-
-                    <p class="project-description">
-
-                        A modern fitness website with membership
-                        plans and training programs.
-
-                    </p>
-
-
-                    <div class="project-progress">
-
-                        <div class="progress-info">
-
-                            <span>Progress</span>
-
-                            <strong>90%</strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill orange-fill" style="width:90%;"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="status active-status">
-
-                            <i class="fa-solid fa-circle"></i>
-
-                            In Progress
-
-                        </span>
-
-
-                        <span class="project-date">
-
-                            <i class="fa-regular fa-calendar"></i>
-
-                            Jul 18, 2026
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 4 -->
-
-                <div class="project-card">
-
-
-                    <div class="project-card-header">
-
-                        <div class="project-icon green">
-
-                            <i class="fa-solid fa-chart-line"></i>
-
-                        </div>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h3>Business Dashboard</h3>
-
-                    <p class="project-client">
-
-                        <i class="fa-solid fa-user"></i>
-
-                        BusinessPro
-
-                    </p>
-
-
-                    <p class="project-description">
-
-                        A clean business dashboard for managing
-                        sales, customers, and analytics.
-
-                    </p>
-
-
-                    <div class="project-progress">
-
-                        <div class="progress-info">
-
-                            <span>Progress</span>
-
-                            <strong>100%</strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill green-fill" style="width:100%;"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="status completed-status">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Completed
-
-                        </span>
-
-
-                        <span class="project-date">
-
-                            <i class="fa-regular fa-calendar"></i>
-
-                            Jul 10, 2026
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 5 -->
-
-                <div class="project-card">
-
-
-                    <div class="project-card-header">
-
-                        <div class="project-icon blue">
-
-                            <i class="fa-solid fa-robot"></i>
-
-                        </div>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h3>AI Startup Landing Page</h3>
-
-                    <p class="project-client">
-
-                        <i class="fa-solid fa-user"></i>
-
-                        AI Solutions
-
-                    </p>
-
-
-                    <p class="project-description">
-
-                        A modern SaaS landing page for an
-                        artificial intelligence startup.
-
-                    </p>
-
-
-                    <div class="project-progress">
-
-                        <div class="progress-info">
-
-                            <span>Progress</span>
-
-                            <strong>100%</strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill" style="width:100%;"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="status completed-status">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Completed
-
-                        </span>
-
-
-                        <span class="project-date">
-
-                            <i class="fa-regular fa-calendar"></i>
-
-                            Jun 30, 2026
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 6 -->
-
-                <div class="project-card">
-
-
-                    <div class="project-card-header">
-
-                        <div class="project-icon red">
-
-                            <i class="fa-solid fa-mobile-screen"></i>
-
-                        </div>
-
-
-                        <button class="more-btn">
-
-                            <i class="fa-solid fa-ellipsis"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h3>Mobile App Landing Page</h3>
-
-                    <p class="project-client">
-
-                        <i class="fa-solid fa-user"></i>
-
-                        Startup Company
-
-                    </p>
-
-
-                    <p class="project-description">
-
-                        A promotional landing page for a
-                        productivity mobile application.
-
-                    </p>
-
-
-                    <div class="project-progress">
-
-                        <div class="progress-info">
-
-                            <span>Progress</span>
-
-                            <strong>35%</strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill red-fill" style="width:35%;"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="status hold-status">
-
-                            <i class="fa-solid fa-circle"></i>
-
-                            On Hold
-
-                        </span>
-
-
-                        <span class="project-date">
-
-                            <i class="fa-regular fa-calendar"></i>
-
-                            Aug 05, 2026
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </section>
-
+            </div>
         </main>
-
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

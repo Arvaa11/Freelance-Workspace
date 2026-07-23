@@ -2,1005 +2,143 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Tasks - WorkSpace</title>
-
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Main CSS -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
-
     <div class="dashboard">
-
-
-        <!-- ==========================
-             SIDEBAR
-        =========================== -->
-
         <aside class="sidebar">
-
-
             <div class="logo">
-
                 <i class="fa-solid fa-laptop-code"></i>
-
                 <h2>WorkSpace</h2>
-
             </div>
-
-
             <ul>
-
-
-                <li>
-
-                    <a href="index.html">
-
-                        <i class="fa-solid fa-house"></i>
-
-                        Dashboard
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="projects.html">
-
-                        <i class="fa-solid fa-folder"></i>
-
-                        Projects
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="clients.html">
-
-                        <i class="fa-solid fa-users"></i>
-
-                        Clients
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="tasks.html" class="active">
-
-                        <i class="fa-solid fa-list-check"></i>
-
-                        Tasks
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="invoices.html">
-
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
-
-                        Invoices
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="calendar.html">
-
-                        <i class="fa-solid fa-calendar-days"></i>
-
-                        Calendar
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="messages.html">
-
-                        <i class="fa-solid fa-message"></i>
-
-                        Messages
-
-                    </a>
-
-                </li>
-
-
-
-
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-folder"></i>Projects</a></li>
+                <li><a href="clients.html"><i class="fa-solid fa-users"></i>Clients</a></li>
+                <li><a href="tasks.html" class="active"><i class="fa-solid fa-list-check"></i>Tasks</a></li>
+                <li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i>Calendar</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
             </ul>
-
-
-            <div class="sidebar-bottom">
-
-                <a href="settings.html">
-
-                    <i class="fa-solid fa-gear"></i>
-
-                    Settings
-
-                </a>
-
-            </div>
-
-
         </aside>
-
-
-        <!-- ==========================
-             MAIN CONTENT
-        =========================== -->
-
         <main class="main-content">
-
-
-            <!-- ==========================
-                 HEADER
-            =========================== -->
-
             <header class="header">
-
-
                 <div class="welcome">
-
                     <h1>Tasks</h1>
-
-                    <p>
-                        Organize your work and stay on top of your deadlines.
-                    </p>
-
+                    <p>Keep your priorities clear and finish work on time.</p>
                 </div>
-
-
                 <div class="header-right">
-
-
                     <div class="search-box">
-
                         <i class="fa-solid fa-magnifying-glass"></i>
-
-                        <input type="text" placeholder="Search tasks...">
-
+                        <input class="search-input" data-target=".task-card" type="text" placeholder="Search tasks...">
                     </div>
-
-
-                    <button class="notification">
-
-                        <i class="fa-regular fa-bell"></i>
-
-                        <span class="notification-dot"></span>
-
-                    </button>
-
-
                     <div class="profile">
-
-                        <img src="Picture.jpeg" alt="Haly Noor">
-
-
+                        <img src="Picture.jpeg" alt="profile">
                         <div>
-
                             <h4>Arwa Mahmood</h4>
-
                             <small>Front-end Developer</small>
-
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </header>
 
-
-            <!-- ==========================
-                 TASK STATISTICS
-            =========================== -->
-
             <section class="stats-grid">
-
-
                 <div class="stat-card">
-
-
-                    <div class="stat-icon blue">
-
-                        <i class="fa-solid fa-list-check"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <p>Total Tasks</p>
-
-                        <h2>32</h2>
-
-                    </div>
-
-
+                    <div class="stat-icon blue"><i class="fa-solid fa-list-check"></i></div>
+                    <div><p>Total Tasks</p><h2 id="total-tasks">0</h2></div>
                 </div>
-
-
                 <div class="stat-card">
-
-
-                    <div class="stat-icon orange">
-
-                        <i class="fa-solid fa-spinner"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <p>In Progress</p>
-
-                        <h2>14</h2>
-
-                    </div>
-
-
+                    <div class="stat-icon yellow"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <div><p>Pending</p><h2 id="pending-tasks">0</h2></div>
                 </div>
-
-
                 <div class="stat-card">
-
-
-                    <div class="stat-icon green">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <p>Completed</p>
-
-                        <h2>15</h2>
-
-                    </div>
-
-
+                    <div class="stat-icon green"><i class="fa-solid fa-check-circle"></i></div>
+                    <div><p>Completed</p><h2 id="completed-tasks">0</h2></div>
                 </div>
-
-
-                <div class="stat-card">
-
-
-                    <div class="stat-icon red">
-
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <p>Overdue</p>
-
-                        <h2>3</h2>
-
-                    </div>
-
-
-                </div>
-
-
             </section>
 
-
-            <!-- ==========================
-                 TASK HEADER
-            =========================== -->
-
-            <section class="section-header">
-
-
+            <section class="filter-panel">
                 <div>
-
-                    <h2>My Tasks</h2>
-
-                    <p>
-                        Manage your daily tasks and project deadlines.
-                    </p>
-
+                    <h2>Task Manager</h2>
+                    <p>Plan daily work, track deadlines, and finish tasks on time.</p>
                 </div>
-
-
-                <button class="primary-btn">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                    Add New Task
-
-                </button>
-
-
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                    <div class="filter-buttons" data-target=".task-card">
+                        <button type="button" class="active" data-filter="all">All</button>
+                        <button type="button" data-filter="pending">Pending</button>
+                        <button type="button" data-filter="completed">Completed</button>
+                        <button type="button" data-filter="high priority">High Priority</button>
+                        <button type="button" data-filter="due today">Due Today</button>
+                        <button type="button" data-filter="overdue">Overdue</button>
+                    </div>
+                    <button class="primary-btn" id="add-task-btn">Add Task</button>
+                </div>
             </section>
 
+            <section class="tasks-list" id="tasks-list"></section>
 
-            <!-- ==========================
-                 TASK FILTERS
-            =========================== -->
-
-            <div class="project-filters">
-
-
-                <button class="filter-btn active">
-
-                    All Tasks
-
-                </button>
-
-
-                <button class="filter-btn">
-
-                    To Do
-
-                </button>
-
-
-                <button class="filter-btn">
-
-                    In Progress
-
-                </button>
-
-
-                <button class="filter-btn">
-
-                    Completed
-
-                </button>
-
-
+            <div class="modal" id="task-modal" aria-hidden="true">
+                <div class="modal-panel">
+                    <div class="modal-header">
+                        <div>
+                            <h2 id="task-modal-title">Add Task</h2>
+                            <p>Capture task details, due dates, and project context.</p>
+                        </div>
+                        <button type="button" class="modal-close" id="task-modal-close">&times;</button>
+                    </div>
+                    <form id="task-form">
+                        <input type="hidden" name="id">
+                        <div class="form-row">
+                            <label>
+                                Task Name
+                                <input type="text" name="name" required>
+                            </label>
+                            <label>
+                                Related Project
+                                <input type="text" name="project" required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                Priority
+                                <select name="priority" required>
+                                    <option value="High">High</option>
+                                    <option value="Medium" selected>Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </label>
+                            <label>
+                                Due Date
+                                <input type="date" name="dueDate" required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                Status
+                                <select name="status" required>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Completed">Completed</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label>
+                            Description
+                            <textarea name="description" rows="4" placeholder="Add a short task description."></textarea>
+                        </label>
+                        <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:16px;">
+                            <button type="button" class="secondary-btn" id="task-modal-cancel">Cancel</button>
+                            <button type="submit" class="primary-btn">Save Task</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-
-            <!-- ==========================
-                 TASK BOARD
-            =========================== -->
-
-            <section class="task-board">
-
-
-                <!-- TO DO -->
-
-                <div class="task-column">
-
-
-                    <div class="task-column-header">
-
-
-                        <h3>
-
-                            <span class="task-dot todo-dot"></span>
-
-                            To Do
-
-                        </h3>
-
-
-                        <span class="task-count">
-
-                            4
-
-                        </span>
-
-
-                    </div>
-
-
-                    <!-- Task 1 -->
-
-                    <div class="task-item">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority high">
-
-                                High Priority
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Complete homepage design
-
-                        </h4>
-
-
-                        <p>
-
-                            Finish the hero section and responsive layout.
-
-                        </p>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                Business Website
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                Jul 18
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Task 2 -->
-
-                    <div class="task-item">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority medium">
-
-                                Medium
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Create contact form
-
-                        </h4>
-
-
-                        <p>
-
-                            Build a clean contact form for the client website.
-
-                        </p>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                Business Website
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                Jul 19
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Task 3 -->
-
-                    <div class="task-item">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority low">
-
-                                Low
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Update portfolio content
-
-                        </h4>
-
-
-                        <p>
-
-                            Add recent projects to the portfolio section.
-
-                        </p>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                Portfolio
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                Jul 22
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-                <!-- IN PROGRESS -->
-
-                <div class="task-column">
-
-
-                    <div class="task-column-header">
-
-
-                        <h3>
-
-                            <span class="task-dot progress-dot"></span>
-
-                            In Progress
-
-                        </h3>
-
-
-                        <span class="task-count">
-
-                            3
-
-                        </span>
-
-
-                    </div>
-
-
-                    <!-- Task 4 -->
-
-                    <div class="task-item">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority high">
-
-                                High Priority
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Build product page
-
-                        </h4>
-
-
-                        <p>
-
-                            Create the product layout for the online store.
-
-                        </p>
-
-
-                        <div class="task-progress">
-
-
-                            <div class="task-progress-info">
-
-                                <span>Progress</span>
-
-                                <strong>65%</strong>
-
-                            </div>
-
-
-                            <div class="progress-bar">
-
-                                <div class="progress-fill" style="width:65%;"></div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                Online Store
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                Jul 20
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Task 5 -->
-
-                    <div class="task-item">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority medium">
-
-                                Medium
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Design pricing section
-
-                        </h4>
-
-
-                        <p>
-
-                            Add pricing cards and membership plans.
-
-                        </p>
-
-
-                        <div class="task-progress">
-
-
-                            <div class="task-progress-info">
-
-                                <span>Progress</span>
-
-                                <strong>40%</strong>
-
-                            </div>
-
-
-                            <div class="progress-bar">
-
-                                <div class="progress-fill purple-fill" style="width:40%;"></div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                PowerFit Gym
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                Jul 21
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-                <!-- COMPLETED -->
-
-                <div class="task-column">
-
-
-                    <div class="task-column-header">
-
-
-                        <h3>
-
-                            <span class="task-dot completed-dot"></span>
-
-                            Completed
-
-                        </h3>
-
-
-                        <span class="task-count">
-
-                            5
-
-                        </span>
-
-
-                    </div>
-
-
-                    <!-- Task 6 -->
-
-                    <div class="task-item completed-task">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority completed-label">
-
-                                Completed
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Create website structure
-
-                        </h4>
-
-
-                        <p>
-
-                            Website structure and page layout completed.
-
-                        </p>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                AI Startup
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                Done
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Task 7 -->
-
-                    <div class="task-item completed-task">
-
-
-                        <div class="task-item-top">
-
-
-                            <span class="priority completed-label">
-
-                                Completed
-
-                            </span>
-
-
-                            <button class="more-btn">
-
-                                <i class="fa-solid fa-ellipsis"></i>
-
-                            </button>
-
-
-                        </div>
-
-
-                        <h4>
-
-                            Finish responsive design
-
-                        </h4>
-
-
-                        <p>
-
-                            Mobile and tablet responsive layout completed.
-
-                        </p>
-
-
-                        <div class="task-item-footer">
-
-
-                            <span>
-
-                                <i class="fa-solid fa-folder"></i>
-
-                                Business Dashboard
-
-                            </span>
-
-
-                            <span>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                Done
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </section>
-
-
         </main>
-
-
     </div>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
